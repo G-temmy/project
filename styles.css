@@ -94,15 +94,15 @@ nav .hamburger::before {
   transition: 0.4s;
 }
 
-nav.hamburger.active::before {
+nav .hamburger.active::before {
   transform: rotate(-45deg) translate(-8px, 5px);
 }
 
-nav .hamburger .active ::after {
+nav .hamburger.active::after {
   transform: rotate(45deg) translate(-8px, -5px);
 }
 
-nav .hamburger .active .bar {
+nav .hamburger.active .bar {
   opacity: 0;
 }
 
@@ -229,6 +229,7 @@ nav .hamburger .active .bar {
   nav .hamburger {
     display: block;
   }
+
   nav ul {
     position: fixed;
     top: 99px;
@@ -244,29 +245,29 @@ nav .hamburger .active .bar {
     transition: 0.5s;
   }
 
-  nav ul li a {
-    font-size: 28px;
-  }
   nav ul.active {
-    left: 0%;
+    left: 0;
   }
-
-  /* Home Section */
+  /* Home section */
   .home {
     position: relative;
-    padding: 50%;
-    height: 100%;
+    padding: 50px; /* ← fixed */
+    height: auto; /* ← fixed */
   }
+
   .home-info {
     flex-direction: column-reverse;
   }
+
   .left {
     padding-top: 50px;
   }
+
   .left p {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 767px) {
   .left h3 {
     font-size: 2rem;
